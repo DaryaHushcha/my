@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Słońce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff3e0;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff6f00;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #ffcc80;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffa726;
+            color: #fff;
+        }
+
+        #fact {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #e65100;
+        }
+    </style>
+</head>
+<body>
+    <h1>☀️ Słońce</h1>
+    <p>Słońce to gwiazda znajdująca się w centrum Układu Słonecznego. Jest źródłem światła i ciepła dla Ziemi, a także wpływa na życie na naszej planecie.</p>
+
+    <button id="fact-btn">Pokaż ciekawostkę</button>
+    <p id="fact"></p>
+
+    <script>
+        const facts = [
+            "Temperatura powierzchni Słońca wynosi około 5500°C.",
+            "Światło ze Słońca dociera do Ziemi w około 8 minut i 20 sekund.",
+            "Słońce jest około 4,6 miliarda lat stare.",
+            "Słońce stanowi 99,86% masy całego Układu Słonecznego."
+        ];
+
+        const button = document.getElementById("fact-btn");
+        const factText = document.getElementById("fact");
+
+        button.addEventListener("click", () => {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            factText.textContent = randomFact;
+        });
+    </script>
+     <a href="index.html">wroc</a>
+</body>
+</html>

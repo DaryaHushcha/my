@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planety</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; background: #e0f7fa; color: #333; }
+        h1 { color: #0277bd; }
+        ul { list-style: none; padding: 0; font-size: 18px; }
+        li { margin: 5px 0; }
+        button { margin-top: 20px; padding: 10px 20px; background: #4dd0e1; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #00acc1; color: #fff; }
+        p.fact { margin-top: 15px; color: #006064; font-size: 18px; }
+        nav a { margin: 0 10px; text-decoration: none; color: #0277bd; font-weight: bold; }
+    </style>
+</head>
+<body>
+   
+
+    <h1>🪐 Planety Układu Słonecznego</h1>
+    <ul>
+        <li>Merkury</li>
+        <li>Wenus</li>
+        <li>Ziemia</li>
+        <li>Mars</li>
+        <li>Jowisz</li>
+        <li>Saturn</li>
+        <li>Uran</li>
+        <li>Neptun</li>
+    </ul>
+
+    <button id="planet-fact-btn">Pokaż ciekawostkę o planetach</button>
+    <p id="planet-fact" class="fact"></p>
+
+    <script>
+        const planetFacts = [
+            "Jowisz to największa planeta Układu Słonecznego.",
+            "Rok na Wenus jest dłuższy niż jej doba.",
+            "Na Marsie znajdują się najwyższe wulkany Układu Słonecznego.",
+            "Saturn ma ponad 80 znanych księżyców.",
+            "Uran obraca się 'na boku' względem orbity."
+        ];
+
+        document.getElementById("planet-fact-btn").addEventListener("click", () => {
+            const fact = planetFacts[Math.floor(Math.random() * planetFacts.length)];
+            document.getElementById("planet-fact").textContent = fact;
+        });
+    </script>
+    <a href="index.html">wroc</a>
+</body>
+</html>
